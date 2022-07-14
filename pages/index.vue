@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     handleClick() {
-      console.log(this.geoCode.country);
+      console.log(this.geoCode);
     }
   }
 }
