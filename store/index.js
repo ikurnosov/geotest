@@ -3,6 +3,6 @@ export const actions = {
     const geo = req.geo;
     console.log(req.geo);
     console.log(req.headers);
-    await dispatch('geo/setGeo', req);
+    await dispatch('geo/setGeo', req.headers);
   }
 };
