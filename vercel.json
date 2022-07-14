@@ -4,5 +4,25 @@
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder"
     }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers" : [
+        {
+          "key" : "Cache-Control",
+          "value" : "s-maxage=180, stale-while-revalidate=15"
+        }
+      ]
+    },
+    {
+      "source": "/(privacy|terms|cookies|contact)",
+      "headers" : [
+        {
+          "key" : "Cache-Control",
+          "value" : "s-maxage=86400, stale-while-revalidate=15"
+        }
+      ]
+    }
   ]
 }
