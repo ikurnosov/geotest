@@ -1,5 +1,5 @@
 <template>
-  <h1 @click="handleClick">TRY ME!</h1>
+  <h1 @click="handleClick">Check your location!</h1>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     handleClick() {
-      console.log(this.geoCode);
+      alert(JSON.stringify(this.geoCode));
     }
   }
 }

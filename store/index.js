@@ -1,8 +1,11 @@
 export const actions = {
   async nuxtServerInit({ dispatch }, { req }) {
-    const geo = req.geo;
-    console.log(req.geo);
-    console.log(req.headers);
-    await dispatch('geo/setGeo', req.headers);
+    const {
+      'x-vercel-ip-country': country,
+      'x-vercel-ip-country-region': region,
+      'x-vercel-ip-city': city
+    } = req.headers;
+
+    await dispatch('geo/setGeo', { country, region, city });
   }
 };
