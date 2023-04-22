@@ -24,8 +24,5 @@
         }
       ]
     }
-  ],
-  "rewrites": [
-    {"source": "/admin/", "destination": "https://oscp-eight.vercel.app/"}
   ]
 }
